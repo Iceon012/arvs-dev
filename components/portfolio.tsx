@@ -80,7 +80,7 @@ const Portfolio = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Web Developer / Back End Developer
+              Web Developer
             </motion.p>
             <div className="flex justify-center space-x-4">
               <motion.a
