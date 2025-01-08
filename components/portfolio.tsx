@@ -270,7 +270,7 @@ const Portfolio = () => {
             className="bg-gray-800 p-8 rounded-lg"
           >
             <p className="text-xl mb-6">
-              I'm currently open for freelance projects and full-time
+              I&apos;m currently open for freelance projects and full-time
               opportunities
             </p>
             <div className="flex lg:flex-row flex-col items-center justify-center space-x-6">

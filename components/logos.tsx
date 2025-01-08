@@ -43,7 +43,7 @@ const TechLogos = () => {
 
   return (
     <div className="flex flex-row items-center justify-center gap-8 p-8 bg-gray-900 rounded-lg">
-      {logos.map(({ name, svg }, index) => (
+      {logos.map(({ svg }, index) => (
         <motion.div
           key={index}
           className="flex flex-col items-center gap-2"
