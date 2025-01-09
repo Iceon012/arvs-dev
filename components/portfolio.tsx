@@ -12,7 +12,7 @@ const Portfolio = () => {
   const menuItems = ["Home", "About", "Projects", "Skills", "Contact"];
 
   return (
-    <div>
+    <div className="bg-gray-900">
       {/* Header */}
       <header className="w-full bg-gray-900 shadow-lg shadow-slate-900 z-50 sh py-3">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full flex items-center justify-center bg-gray-900 text-white py-56 pt-16"
+          className="w-full flex items-center justify-center bg-gray-900 text-white py-48 pt-24"
         >
           <div className="text-center">
             <motion.h1
@@ -108,106 +108,116 @@ const Portfolio = () => {
         </motion.section>
       </BackgroundBeamsWithCollision>
       <TechStackSlider />
-      <motion.section
-        id="about"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className=" flex items-center bg-white py-40 px-10 lg:px-0"
-      >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <img
-                src="/api/placeholder/400/400"
-                alt="Profile"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-            <div>
-              <p className="text-lg text-gray-600 mb-4">
-                Passionate full-stack developer with 5+ years of experience
-                building web applications. Specializing in React, Node.js, and
-                cloud architecture.
-              </p>
-              <p className="text-lg text-gray-600 mb-4">
-                Currently working on innovative projects that push the
-                boundaries of web technology while maintaining a focus on user
-                experience and performance.
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg"
-              >
-                Download CV
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-      {/* Projects Section */}
-      <motion.section
-        id="projects"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="bg-gray-50 py-40 px-10 lg:px-0"
-      >
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "E-commerce Platform",
-                desc: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-                tech: ["React", "Node.js", "MongoDB"],
-              },
-              {
-                title: "AI Chat Application",
-                desc: "Real-time chat application with AI-powered responses",
-                tech: ["Python", "TensorFlow", "WebSocket"],
-              },
-              {
-                title: "Portfolio Generator",
-                desc: "Dynamic portfolio generator with customizable themes",
-                tech: ["Next.js", "Tailwind CSS", "Firebase"],
-              },
-            ].map((project, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+      <BackgroundBeamsWithCollision>
+        <motion.section
+          id="about"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="w-full flex items-center bg-gray-900 py-40 px-10 lg:px-0"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
                 <img
-                  src={`/api/placeholder/400/200`}
-                  alt={project.title}
-                  className="rounded-lg mb-4"
+                  src="/assets/images/profile.png"
+                  alt="Profile"
+                  className="max-w-lg rounded-lg shadow-lg"
                 />
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-100 px-3 py-1 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <motion.a
-                  href="#"
-                  className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-600"
+              </div>
+              <div>
+                <p className="text-lg text-gray-600 mb-4">
+                  Passionate full-stack developer with 5+ years of experience
+                  building web applications. Specializing in React, Node.js, and
+                  cloud architecture.
+                </p>
+                <p className="text-lg text-gray-600 mb-4">
+                  Currently working on innovative projects that push the
+                  boundaries of web technology while maintaining a focus on user
+                  experience and performance.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-blue-500 text-white px-6 py-2 rounded-lg"
                 >
-                  View Project <ExternalLink size={16} className="ml-1" />
-                </motion.a>
-              </motion.div>
-            ))}
+                  Download CV
+                </motion.button>
+              </div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
+      </BackgroundBeamsWithCollision>
+      <BackgroundBeamsWithCollision>
+        {/* Projects Section */}
+        <motion.section
+          id="projects"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="w-full bg-gray-900 py-40 px-10 lg:px-0"
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  img: "/assets/images/ars.jpg",
+                  title: "Enrollment System",
+                  link: "https://student-pi.vercel.app/login",
+                  desc: "Enrollment System is designed to streamline administrative processes, enhance communication, and improve the learning experience for students and staff alike.",
+                  tech: ["Angular", "Node.js", "MySQL", "PHP"],
+                },
+                {
+                  img: "/assets/images/arvs-dev-profile.png",
+                  title: "Library Log System",
+                  link: "#",
+                  desc: "Real-time chat application with AI-powered responses",
+                  tech: ["Python", "TensorFlow", "WebSocket"],
+                },
+                {
+                  img: "/assets/images/photography.jpg",
+                  title: "Portfolio Generator",
+                  link: "#",
+                  desc: "Dynamic portfolio generator with customizable themes",
+                  tech: ["Next.js", "Tailwind CSS", "Firebase"],
+                },
+              ].map((project, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-800 p-10 rounded-lg shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-gray-900 px-3 py-1 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <motion.a
+                    href={`${project.link ? project.link : "#"}`}
+                    className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-600"
+                  >
+                    View Project <ExternalLink size={16} className="ml-1" />
+                  </motion.a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+      </BackgroundBeamsWithCollision>
+
       {/* Skills Section */}
       <motion.section
         id="skills"

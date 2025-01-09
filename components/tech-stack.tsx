@@ -122,7 +122,7 @@ const TechStackSlider = () => {
         {duplicatedTech.map((tech, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 px-6 py-3 rounded-lg bg-gray-800 bg-opacity-50"
+            className="flex items-center gap-4 px-6 py-3 bg-opacity-50"
           >
             {tech.icon}
             <span className="text-lg font-semibold text-white">
