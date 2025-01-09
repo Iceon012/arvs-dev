@@ -4,8 +4,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
-import TechLogos from "./logos";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-collision";
+import TechStackSlider from "./tech-stack";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
     <div>
       {/* Header */}
-      <header className="fixed w-full bg-gray-900 shadow-lg shadow-slate-900 z-50 sh py-3">
+      <header className="w-full bg-gray-900 shadow-lg shadow-slate-900 z-50 sh py-3">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
@@ -65,7 +65,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="h-screen w-full flex items-center justify-center bg-gray-900 text-white p-8 pt-16"
+          className="w-full flex items-center justify-center bg-gray-900 text-white py-56 pt-16"
         >
           <div className="text-center">
             <motion.h1
@@ -73,7 +73,7 @@ const Portfolio = () => {
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              Arvin Ayson
+              Hi I&apos;m Arvin
             </motion.h1>
             <motion.p
               className="text-xl mb-6"
@@ -101,12 +101,13 @@ const Portfolio = () => {
                 <Linkedin size={24} />
               </motion.a>
             </div>
-            <div className="mt-20">
+            {/* <div className="mt-20">
               <TechLogos />
-            </div>
+            </div> */}
           </div>
         </motion.section>
       </BackgroundBeamsWithCollision>
+      <TechStackSlider />
       <motion.section
         id="about"
         initial={{ opacity: 0 }}
