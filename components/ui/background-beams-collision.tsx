@@ -86,7 +86,7 @@ export const BackgroundBeamsWithCollision = ({
 
       {children}
       <div
-        ref={containerRef}
+        // ref={containerRef}
         className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"
         style={{
           boxShadow:
@@ -177,7 +177,7 @@ const CollisionMechanism = React.forwardRef<
     <>
       <motion.div
         key={beamKey}
-        ref={beamRef}
+        // ref={beamRef}
         animate="animate"
         initial={{
           translateY: beamOptions.initialY || "-200px",
