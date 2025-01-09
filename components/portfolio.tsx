@@ -256,45 +256,47 @@ const Portfolio = () => {
         </div>
       </motion.section>
       {/* Contact Section */}
-      <motion.section
-        id="contact"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className=" bg-gray-900 text-white py-40 px-10 lg:px-0"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-800 p-8 rounded-lg"
-          >
-            <p className="text-xl mb-6">
-              I&apos;m currently open for freelance projects and full-time
-              opportunities
-            </p>
-            <div className="flex lg:flex-row flex-col items-center justify-center space-x-6">
-              <motion.a
-                href="mailto:email@example.com"
-                className="flex items-center space-x-2 text-gray-300 hover:text-white"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Mail size={20} />
-                <span>a.ayson12345@gmail.com</span>
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/arvin-ayson-888139236/"
-                className="flex items-center space-x-2 text-gray-300 hover:text-white"
-                whileHover={{ scale: 1.1 }}
-                target="_blank"
-              >
-                <Linkedin size={20} />
-                <span>LinkedIn</span>
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+      <BackgroundBeamsWithCollision>
+        <motion.section
+          id="contact"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className=" w-full h-auto bg-gray-900 text-white py-40 px-10 lg:px-0"
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gray-800 p-8 rounded-lg"
+            >
+              <p className="text-xl mb-6">
+                I&apos;m currently open for freelance projects and full-time
+                opportunities
+              </p>
+              <div className="flex lg:flex-row flex-col items-center justify-center space-x-6">
+                <motion.a
+                  href="mailto:email@example.com"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Mail size={20} />
+                  <span>a.ayson12345@gmail.com</span>
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/in/arvin-ayson-888139236/"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white"
+                  whileHover={{ scale: 1.1 }}
+                  target="_blank"
+                >
+                  <Linkedin size={20} />
+                  <span>LinkedIn</span>
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 };
