@@ -63,9 +63,9 @@ const Portfolio = () => {
       <BackgroundBeamsWithCollision>
         <motion.section
           id="home"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.8 }}
           className="w-full flex items-center justify-center bg-gray-900 text-white py-48 pt-24 z-10"
         >
           <div className="text-center">
@@ -152,9 +152,9 @@ const Portfolio = () => {
         {/* Projects Section */}
         <motion.section
           id="projects"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
+          // transition={{ duration: 1 }}
           className="w-full bg-gray-900 py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-6xl mx-auto">
