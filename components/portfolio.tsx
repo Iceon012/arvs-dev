@@ -11,7 +11,7 @@ import ScrollToTopButton from "./scroll-to-top";
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const menuItems = ["Home", "About", "Projects", "Skills", "Contact"];
-  const menuItems = ["Home", "Projects", "Contact"];
+  const menuItems = ["Home", "About", "Projects", "Contact"];
 
   return (
     <div>
@@ -64,9 +64,6 @@ const Portfolio = () => {
       <BackgroundBeamsWithCollision>
         <motion.section
           id="home"
-          // initial={{ opacity: 0, y: 20 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8 }}
           className="w-full flex items-center justify-center  text-white py-48 pt-24 z-10"
         >
           <div className="text-center">
@@ -110,45 +107,61 @@ const Portfolio = () => {
         </motion.section>
       </BackgroundBeamsWithCollision>
       <TechStackSlider />
-      {/* <BackgroundBeamsWithCollision>
+      <BackgroundBeamsWithCollision>
         <motion.section
           id="about"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full flex items-center bg-gray-900 py-40 px-10 lg:px-0"
+          className="w-full min-h-screen flex items-center justify-center py-28 px-6  z-10"
         >
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
+          <div className="w-full max-w-6xl">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="w-full"
+              >
                 <img
                   src="/assets/images/profile.png"
                   alt="Profile"
-                  className="max-w-lg rounded-lg shadow-lg"
+                  className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
                 />
-              </div>
-              <div>
-                <p className="text-lg text-gray-600 mb-4">
-                  Passionate full-stack developer with 5+ years of experience
-                  building web applications. Specializing in React, Node.js, and
-                  cloud architecture.
+              </motion.div>
+
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="w-full lg:w-2/3 space-y-6"
+              >
+                <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
+                <p className="text-lg text-gray-400">
+                  Passionate front-end developer with 1 year of experience
+                  building web applications. Specializing in React, Node.js,
+                  TailwindCSS and cloud architecture.
                 </p>
-                <p className="text-lg text-gray-600 mb-4">
+                <p className="text-lg text-gray-400">
                   Currently working on innovative projects that push the
                   boundaries of web technology while maintaining a focus on user
                   experience and performance.
                 </p>
-                <motion.button
+                <br />
+                <motion.a
                   whileHover={{ scale: 1.05 }}
-                  className="bg-blue-500 text-white px-6 py-2 rounded-lg"
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-blue-900 hover:bg-blue-600 text-white px-8 py-3 rounded-lg transition-colors duration-300 mt-6"
+                  href="/resume"
+                  target="_blank"
                 >
-                  Download CV
-                </motion.button>
-              </div>
+                  View CV
+                </motion.a>
+              </motion.div>
             </div>
           </div>
         </motion.section>
-      </BackgroundBeamsWithCollision> */}
+      </BackgroundBeamsWithCollision>
       <BackgroundBeamsWithCollision>
         {/* Projects Section */}
         <motion.section
