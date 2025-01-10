@@ -84,7 +84,7 @@ const Portfolio = () => {
             >
               Web Developer
             </motion.p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 text-blue-900">
               <motion.a
                 href="https://github.com/Iceon012"
                 whileHover={{ scale: 1.1 }}
@@ -173,7 +173,7 @@ const Portfolio = () => {
                   title: "Don Verge Delivery App",
                   link: "#",
                   desc: "Don Verge Delivery App is an innovative and user-friendly platform designed to revolutionize the way you send and pick-up orders.Don Verge Delivery App makes it simple, fast, and efficient.",
-                  tech: ["Python", "TensorFlow", "WebSocket"],
+                  tech: ["React Native", "Penpot", "Firebase"],
                 },
                 {
                   img: "/assets/images/photography.jpg",
@@ -185,33 +185,37 @@ const Portfolio = () => {
               ].map((project, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-800 p-10 rounded-lg shadow-lg"
+                  className="bg-gray-800 p-10 rounded-lg shadow-lg flex flex-col"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="rounded-lg mb-4"
-                  />
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-4">{project.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-gray-900 px-3 py-1 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="">
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="rounded-lg mb-4"
+                    />
+                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-gray-400 mb-4">{project.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-gray-900 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <motion.a
-                    href={`${project.link ? project.link : "#"}`}
-                    className="inline-flex items-center mt-4 text-blue-500 hover:text-blue-600"
-                  >
-                    View Project <ExternalLink size={16} className="ml-1" />
-                  </motion.a>
+                  <div className="mt-auto text-center">
+                    <motion.a
+                      href={`${project.link ? project.link : "#"}`}
+                      className="flex flex-row items-center justify-center mt-4 text-white hover:text-gray-300 bg-blue-900 p-3 rounded-lg"
+                    >
+                      View Project <ExternalLink size={16} className="ml-1" />
+                    </motion.a>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -245,7 +249,7 @@ const Portfolio = () => {
                   whileHover={{ scale: 1.1 }}
                 >
                   <Mail size={20} />
-                  <span>a.ayson12345@gmail.com</span>
+                  <span>arvs.dev@gmail.com</span>
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/in/arvin-ayson-888139236/"
