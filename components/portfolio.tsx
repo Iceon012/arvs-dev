@@ -66,7 +66,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full flex items-center justify-center bg-gray-900 text-white py-48 pt-24"
+          className="w-full flex items-center justify-center bg-gray-900 text-white py-48 pt-24 z-10"
         >
           <div className="text-center">
             <motion.h1
@@ -155,7 +155,7 @@ const Portfolio = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full bg-gray-900 py-40 px-10 lg:px-0"
+          className="w-full bg-gray-900 py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-8">Projects</h2>
@@ -227,7 +227,7 @@ const Portfolio = () => {
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}
           // transition={{ duration: 1 }}
-          className=" w-full h-auto bg-gray-900 text-white py-40 px-10 lg:px-0"
+          className=" w-full h-auto bg-gray-900 text-white py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
@@ -236,8 +236,7 @@ const Portfolio = () => {
               className="bg-gray-800 p-8 rounded-lg"
             >
               <p className="text-xl mb-6">
-                I&apos;m currently open for freelance projects and full-time
-                opportunities
+                I&apos;m currently open for full-time opportunities
               </p>
               <div className="flex lg:flex-row flex-col items-center justify-center space-x-6">
                 <motion.a
