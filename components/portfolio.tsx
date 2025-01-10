@@ -9,7 +9,8 @@ import TechStackSlider from "./tech-stack";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuItems = ["Home", "About", "Projects", "Skills", "Contact"];
+  // const menuItems = ["Home", "About", "Projects", "Skills", "Contact"];
+  const menuItems = ["Home", "Projects", "Contact"];
 
   return (
     <div className="bg-gray-900">
@@ -108,7 +109,7 @@ const Portfolio = () => {
         </motion.section>
       </BackgroundBeamsWithCollision>
       <TechStackSlider />
-      <BackgroundBeamsWithCollision>
+      {/* <BackgroundBeamsWithCollision>
         <motion.section
           id="about"
           initial={{ opacity: 0 }}
@@ -146,7 +147,7 @@ const Portfolio = () => {
             </div>
           </div>
         </motion.section>
-      </BackgroundBeamsWithCollision>
+      </BackgroundBeamsWithCollision> */}
       <BackgroundBeamsWithCollision>
         {/* Projects Section */}
         <motion.section
@@ -168,17 +169,17 @@ const Portfolio = () => {
                   tech: ["Angular", "Node.js", "MySQL", "PHP"],
                 },
                 {
-                  img: "/assets/images/arvs-dev-profile.png",
-                  title: "Library Log System",
+                  img: "/assets/images/donverge.jpg",
+                  title: "Don Verge Delivery App",
                   link: "#",
-                  desc: "Real-time chat application with AI-powered responses",
+                  desc: "Don Verge Delivery App is an innovative and user-friendly platform designed to revolutionize the way you send and pick-up orders.Don Verge Delivery App makes it simple, fast, and efficient.",
                   tech: ["Python", "TensorFlow", "WebSocket"],
                 },
                 {
                   img: "/assets/images/photography.jpg",
-                  title: "Portfolio Generator",
+                  title: "Photography Booking System",
                   link: "#",
-                  desc: "Dynamic portfolio generator with customizable themes",
+                  desc: "a platform tailored specifically for photographers and clients to simplify the process of scheduling, managing, and booking photography sessions. Whether you're a professional photographer or a client looking for seamless coordination, Iceonphotography ensures a stress-free experience from start to finish.",
                   tech: ["Next.js", "Tailwind CSS", "Firebase"],
                 },
               ].map((project, index) => (
@@ -194,7 +195,7 @@ const Portfolio = () => {
                     className="rounded-lg mb-4"
                   />
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.desc}</p>
+                  <p className="text-gray-400 mb-4">{project.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
@@ -219,61 +220,13 @@ const Portfolio = () => {
       </BackgroundBeamsWithCollision>
 
       {/* Skills Section */}
-      <motion.section
-        id="skills"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className=" bg-white py-40 px-10 lg:px-0"
-      >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8">Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Frontend",
-                skills: ["React", "Vue.js", "TypeScript", "Tailwind CSS"],
-              },
-              {
-                name: "Backend",
-                skills: ["Node.js", "Python", "Go", "PostgreSQL"],
-              },
-              {
-                name: "DevOps",
-                skills: ["Docker", "AWS", "CI/CD", "Kubernetes"],
-              },
-              { name: "Tools", skills: ["Git", "VS Code", "Figma", "Postman"] },
-              {
-                name: "Soft Skills",
-                skills: ["Leadership", "Communication", "Problem Solving"],
-              },
-              { name: "Methods", skills: ["Agile", "Scrum", "TDD", "DDD"] },
-            ].map((category) => (
-              <motion.div
-                key={category.name}
-                className="bg-gray-50 p-6 rounded-lg"
-                whileHover={{ scale: 1.05 }}
-              >
-                <h3 className="text-lg font-bold mb-3">{category.name}</h3>
-                <ul className="space-y-2">
-                  {category.skills.map((skill) => (
-                    <li key={skill} className="text-gray-600">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
       {/* Contact Section */}
       <BackgroundBeamsWithCollision>
         <motion.section
           id="contact"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
+          // transition={{ duration: 1 }}
           className=" w-full h-auto bg-gray-900 text-white py-40 px-10 lg:px-0"
         >
           <div className="max-w-4xl mx-auto text-center">
