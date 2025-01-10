@@ -13,7 +13,7 @@ const Portfolio = () => {
   const menuItems = ["Home", "Projects", "Contact"];
 
   return (
-    <div className="bg-gray-900">
+    <div>
       {/* Header */}
       <header className="w-full bg-gray-900 shadow-lg shadow-slate-900 z-50 sh py-3">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ const Portfolio = () => {
           // initial={{ opacity: 0, y: 20 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ duration: 0.8 }}
-          className="w-full flex items-center justify-center bg-gray-900 text-white py-48 pt-24 z-10"
+          className="w-full flex items-center justify-center  text-white py-48 pt-24 z-10"
         >
           <div className="text-center">
             <motion.h1
@@ -155,7 +155,7 @@ const Portfolio = () => {
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}
           // transition={{ duration: 1 }}
-          className="w-full bg-gray-900 py-40 px-10 lg:px-0 z-10"
+          className="w-full py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-8">Projects</h2>
@@ -227,7 +227,7 @@ const Portfolio = () => {
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}
           // transition={{ duration: 1 }}
-          className=" w-full h-auto bg-gray-900 text-white py-40 px-10 lg:px-0 z-10"
+          className=" w-full h-auto text-white py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
