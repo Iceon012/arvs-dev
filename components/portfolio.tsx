@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Menu, X, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-collision";
 import TechStackSlider from "./tech-stack";
+import ScrollToTopButton from "./scroll-to-top";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -265,6 +266,7 @@ const Portfolio = () => {
           </div>
         </motion.section>
       </BackgroundBeamsWithCollision>
+      <ScrollToTopButton />
     </div>
   );
 };
