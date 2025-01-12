@@ -81,7 +81,7 @@ const ResumeViewer = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8"
+        className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 z-10"
       >
         <div className="max-w-4xl mx-auto">
           <motion.div
