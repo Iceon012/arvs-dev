@@ -100,9 +100,6 @@ const Portfolio = () => {
                 <Linkedin size={24} />
               </motion.a>
             </div>
-            {/* <div className="mt-20">
-              <TechLogos />
-            </div> */}
           </div>
         </motion.section>
       </BackgroundBeamsWithCollision>
@@ -113,7 +110,7 @@ const Portfolio = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full min-h-screen flex items-center justify-center py-28 px-6  z-10"
+          className="w-full flex items-center justify-center py-28 px-6  z-10"
         >
           <div className="w-full max-w-6xl">
             <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -126,7 +123,7 @@ const Portfolio = () => {
                 <img
                   src="/assets/images/profile.png"
                   alt="Profile"
-                  className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+                  className="w-full max-w-full mx-auto rounded-lg shadow-lg"
                 />
               </motion.div>
 
@@ -140,7 +137,7 @@ const Portfolio = () => {
                 <p className="text-lg text-gray-400">
                   Passionate front-end developer with 1 year of experience
                   building web applications. Specializing in React, Node.js,
-                  TailwindCSS and cloud architecture.
+                  TailwindCSS, React Native and cloud architecture.
                 </p>
                 <p className="text-lg text-gray-400">
                   Currently working on innovative projects that push the
@@ -166,9 +163,6 @@ const Portfolio = () => {
         {/* Projects Section */}
         <motion.section
           id="projects"
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // transition={{ duration: 1 }}
           className="w-full py-40 px-10 lg:px-0 z-10"
         >
           <div className="max-w-6xl mx-auto">
