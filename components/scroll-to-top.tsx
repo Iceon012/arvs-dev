@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-20 right-5 z-50"
     >
       {isVisible && (
         <button

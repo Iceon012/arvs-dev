@@ -7,6 +7,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-collision";
 import TechStackSlider from "./tech-stack";
 import ScrollToTopButton from "./scroll-to-top";
+import ChatBubble from "./chat-bubble";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -274,6 +275,7 @@ const Portfolio = () => {
         </motion.section>
       </BackgroundBeamsWithCollision>
       <ScrollToTopButton />
+      <ChatBubble />
     </div>
   );
 };
