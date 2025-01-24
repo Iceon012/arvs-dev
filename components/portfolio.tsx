@@ -8,11 +8,24 @@ import { BackgroundBeamsWithCollision } from "./ui/background-beams-collision";
 import TechStackSlider from "./tech-stack";
 import ScrollToTopButton from "./scroll-to-top";
 import ChatBubble from "./chat-bubble";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import { sendEmail } from "./action/send-email";
+import { Label } from "./ui/label";
+import { useFormStatus } from "react-dom";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pending } = useFormStatus();
+
   // const menuItems = ["Home", "About", "Projects", "Skills", "Contact"];
   const menuItems = ["Home", "About", "Projects", "Contact"];
+
+  async function handleSubmit(formData: FormData) {
+    const result = await sendEmail(formData);
+    console.log(result);
+    console.log("submit");
+  }
 
   return (
     <div>
@@ -232,7 +245,6 @@ const Portfolio = () => {
         </motion.section>
       </BackgroundBeamsWithCollision>
 
-      {/* Skills Section */}
       {/* Contact Section */}
       <BackgroundBeamsWithCollision>
         <motion.section
@@ -251,6 +263,23 @@ const Portfolio = () => {
               <p className="text-xl mb-6">
                 I&apos;m currently open for full-time opportunities
               </p>
+              <motion.form initial="hidden" action={handleSubmit}>
+                <div className="lg:px-56 px-5 mx-auto flex lg:flex-row flex-col mb-5 gap-2">
+                  <Label htmlFor="email" className="hidden">
+                    Your email
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="..."
+                    required
+                  />
+                  <Button type="submit" disabled={pending}>
+                    {pending ? "...submiting" : "Submit"}
+                  </Button>
+                </div>
+              </motion.form>
               <div className="flex lg:flex-row flex-col items-center justify-center space-x-6">
                 <motion.a
                   href="mailto:email@example.com"
@@ -258,7 +287,7 @@ const Portfolio = () => {
                   whileHover={{ scale: 1.1 }}
                 >
                   <Mail size={20} />
-                  <span>arvs.dev@gmail.com</span>
+                  <span>arvinayson.dev@gmail.com</span>
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/in/arvin-ayson-888139236/"

@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.0.19",
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-select": "^2.1.5",
+    "@radix-ui/react-slot": "^1.1.1",
     "@tabler/icons-react": "^3.28.1",
     "ai": "^4.0.38",
     "class-variance-authority": "^0.7.1",
@@ -19,8 +23,11 @@
     "next": "14.2.16",
     "react": "^18",
     "react-dom": "^18",
+    "resend": "^4.1.1",
+    "sonner": "^1.7.2",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "toast": "^0.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
