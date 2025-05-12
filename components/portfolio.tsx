@@ -204,6 +204,13 @@ const Portfolio = () => {
                   desc: "a platform tailored specifically for photographers and clients to simplify the process of scheduling, managing, and booking photography sessions. Whether you're a professional photographer or a client looking for seamless coordination, Iceonphotography ensures a stress-free experience from start to finish.",
                   tech: ["Next.js", "Tailwind CSS", "Firebase"],
                 },
+                {
+                  img: "/assets/images/remove-it.png",
+                  title: "RemoveIt",
+                  link: "https://remove-it.vercel.app/",
+                  desc: "Get perfect cutouts in seconds with our AI-powered background removal tool. No design skills needed.",
+                  tech: ["Next.js", "Tailwind CSS", "Remove.BG API"],
+                },
               ].map((project, index) => (
                 <motion.div
                   key={index}
@@ -233,6 +240,7 @@ const Portfolio = () => {
                   <div className="mt-auto text-center">
                     <motion.a
                       href={`${project.link ? project.link : "#"}`}
+                      target="_blank"
                       className="flex flex-row items-center justify-center mt-4 text-white hover:text-gray-300 bg-blue-900 p-3 rounded-lg"
                     >
                       View Project <ExternalLink size={16} className="ml-1" />
